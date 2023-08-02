@@ -4,215 +4,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sorteio</title>
+    <title>Exercicios</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
              }
 
-        #sorteioAluno {
-display:none;
-border: 2px solid black;
-            border-radius: 15px;
-            padding: 20px;
-            width: 80%;
-            height: 950px;
-            background-color: rgba(209, 231, 231,0.6);
-            margin: auto;
-        }
-
-        #escolhido {
-            text-align: center;
-            width: 100%;
-            height: 300px;
-             float: left;
-        }
-
-        #pergunta {
-            text-align: center;
-            width: 100%; 
-            height: 300px;
-            float: left;
-        }
-
-        h1 {
-            font-size: 250%;
-            text-align: center;
-            margin: 30px;
-            width: 400px;
-            height: 50px;
-            float: left;
-        }
-
-        #sorteioAluno h2 {
-            font-size: 500%;
-            text-align: center;
-        }
-
-        button {
-            float: right;
-            font-weight: bolder;
-            font-size: larger;
-            border-radius: 15px;
-            border: none;
-            background-color: black;
-            color: aliceblue;
-            margin: 20px;
-            width: 400px;
-            height: 50px;
-
-}
-img        {width: 100px;
-height: 500px; }
-
-
-
-
-
-
-
+      
     </style>
 
 
 </head>
 
 <body>
- <img src="teste.jpeg" alt="disc imagem"/>
+<header>
+  <h1>Peogramação Front End</h1>
+  <nav>
+    <a href="alura.html">alura</a>
+  </nav>
+</header>
 
 
-
-
-
-    <section id="sorteioAluno">
-        <div>
-
-            <h1>
-                Pergunta:
-            </h1>
-            <button onclick="proximaQestao()">PROX. QUESTÃO</button>
-            <h2 id="pergunta">
-
-            </h2>
-
-
-        </div>
-       
-
-        <div>
-            <h1>
-                Aluno(a):
-            </h1>
-            <button onclick="sorteio()">SORTEAR</button>
-            <h2 id="escolhido">
-
-            </h2>
-
-        </div>
-    </section>
-    <script>
-
-        var nomes =
-            `ADRIAN GABRIEL SCHMIDT DE BRITO
-ARTHUR VIANA SANTOS
-DEBORAH VITORIA HOFMEISTER
-EMANUELLY FERREIRA DA SILVA
-EVELYN KAUANY VARGAS
-FELIPE HEDLER TEODORO DA SILVA
-FELIPE MENDES PASSOS
-GABRIEL ALVES DA ROCHA
-GUILHERME JONAS ALVES DA SILVA
-GUSTAVO DA SILVA BUENO
-GUSTAVO SAMUEL COSTA CARVALHO
-ISABELLI GONCALVES DE SOUZA
-JACKLINE FERNANDA NOGUEIRA
-JEAN FRANCISCO COELHO DE LIMA
-JONATAS RIBEIRO DA SILVA
-KETHLY BRIL
-KETLYN KAROLINE DE LIMA
-LUAN FLORES MANCO
-MARIANA NAZARIO DA SILVA ROSIN
-MATEUS CRUZ DE OLIVEIRA
-MATHEUS LIMA WOLCK
-MATHEUS RODRIGUES DE OLIVEIRA
-NICOLAS GABRIEL DA SILVA GREGORIO
-PALLOMA CRISTINA LESTSCHUKI
-PAULO HENRIQUE LIMA RIBEIRO
-REBEKA RAIZER DE MORAIS
-RENAN DANIEL DE CAMPOS
-RHAILY GABRIELLY FERREIRA BECKER
-SILVIO EDUARDO TRELHA BARBOSA
-THIAGO CANDIDO RODRIGUES
-THIAGO KAZIAL DE CARVALHO
-VITOR GABRIEL SIQUEIRA ALVES
-VITOR GARAI BUENO
-VIVIANE DOS SANTOS DA SILVA`;
-
-
-        var perguntas =
-            `1-Método geralmente utilizado geralmente para pegar informações web
-2-Protocolo que comprime os cabeçalhos, reduzindo assim o tamanho de cada transferência
-3-Técnica utilizada para votação de forma tranquila
-4-Método utilizado para desenvolver a modelagem(esqueleto) do site ou aplicativo
-5-Técnica que envolve pedir aos usuários que organizem as informações em uma série de cartões rotulados
-6-Conjunto de práticas que facilita um grupo a atingir um objetivo por meio de um jogo
-7-Utilizado para transferir dados através de protocolos de comunicação para diferentes plataformas
-8-Consiste principalmente em separar as tarefas de um projeto em três colunas diferentes
-9-Estilo de arquitetura para sistemas que usa Transferência de Estado Representacional
-10-Método geralmente utilizado quando se envia um formulário web
-`
-
-        nomes = nomes.split('\n');
-
-        perguntas = perguntas.split('\n');
-
-        aleatorio = '';
-
-        numeroPergunta = 0;
-
-        tamanhoPerguntas = perguntas.length - 1;
-
-        function sorteio() {
-
-            tamanho = nomes.length - 1;
-
-            for (var i = 0; i < 25; i++) {
-                setTimeout(function () { geraAlearorio() }, i * 100);
-            }
-
-            setTimeout(function () { console.log(nomeAleatorio); nomes.splice(aleatorio, 1) }, 3000);
-
-        }
-
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        function geraAlearorio() {
-            aleatorio = getRandomInt(tamanho);
-
-            nomeAleatorio = nomes[aleatorio];
-
-            document.getElementById('escolhido').innerHTML = nomeAleatorio;
-
-        }
-
-        function proximaQestao() {
-
-            if (numeroPergunta >= tamanhoPerguntas) {
-                document.getElementById('pergunta').innerHTML = 'FIM';
-
-            }
-            else {
-
-                pergunta = perguntas[numeroPergunta];
-
-                document.getElementById('pergunta').innerHTML = pergunta;
-
-                numeroPergunta++;
-            }
-        }
-
-    </script>
+  
 </body>
 
 </html>
